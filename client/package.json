@@ -18,6 +18,8 @@
     "svelte": "^3.0.0"
   },
   "dependencies": {
+    "axios": "^0.19.2",
+    "mongodb": "^3.5.9",
     "sirv-cli": "^0.4.4"
   }
 }
