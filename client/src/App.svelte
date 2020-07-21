@@ -14,6 +14,7 @@
 
     humidity = res.data.readings[0].humidity.toFixed(1);
     temp = res.data.readings[0].temperature.toFixed(1);
+    time = res.data.readings[0].time.slice(0, 5);
   });
 
   function getLatestReading() {
@@ -22,6 +23,7 @@
       .then(res => {
         humidity = res.data.readings[0].humidity.toFixed(1);
         temp = res.data.readings[0].temperature.toFixed(1);
+        time = res.data.readings[0].time.slice(0, 5);
       })
       .catch(err => console.error(err));
   }
@@ -129,7 +131,7 @@
   </div>
   <div class="field-container">
     <div class="field-sub-container">
-      <p class="field time-field">12:37</p>
+      <p class="field time-field">{time}</p>
       <div class="field-label-container">
         <p class="field-unit date-field">&nbsp;</p>
         <p class="subfield">LAST UPDATE</p>
