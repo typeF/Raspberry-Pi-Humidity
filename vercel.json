@@ -1,7 +1,0 @@
-{
-  "name": "raspberry-pi-temp-monitor",
-  "version": 2,
-  "env": {
-    "MONGODB_URI": "@MONGODB_URI"
-  }
-}

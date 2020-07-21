@@ -12,16 +12,16 @@
       .get("/api/records")
       .catch(err => console.error(err));
 
-    humidity = res.data.readings[0].humidity;
-    temp = res.data.readings[0].temperature;
+    humidity = res.data.readings[0].humidity.toFixed(1);
+    temp = res.data.readings[0].temperature.toFixed(1);
   });
 
   function getLatestReading() {
     return axios
       .get("/api/records")
       .then(res => {
-        humidity = res.data.readings[0].humidity;
-        temp = res.data.readings[0].temperature;
+        humidity = res.data.readings[0].humidity.toFixed(1);
+        temp = res.data.readings[0].temperature.toFixed(1);
       })
       .catch(err => console.error(err));
   }
@@ -63,7 +63,7 @@
   }
 
   .subfield {
-    margin-top: 0;
+    margin: 0;
     color: grey;
     text-align: left;
   }
@@ -83,7 +83,7 @@
   .field-label-container {
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: space-evenly;
     padding: 0 0 0 10px;
   }
 
@@ -131,7 +131,7 @@
     <div class="field-sub-container">
       <p class="field time-field">12:37</p>
       <div class="field-label-container">
-        <p class="field-unit date-field">JUL 1</p>
+        <p class="field-unit date-field">&nbsp;</p>
         <p class="subfield">LAST UPDATE</p>
       </div>
     </div>

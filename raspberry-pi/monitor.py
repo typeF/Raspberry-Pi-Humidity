@@ -29,7 +29,7 @@ while True:
         'temperature': temperature,
     }
 
-    result = db.humidity.insert_one(humidity)
+    result = db.humidity.insert_one(reading)
 #     print("\nTemperature: %0.1f C" % sensor.temperature)
 #     print("Humidity: %0.1f %%" % sensor.relative_humidity)
     sleep(60)
