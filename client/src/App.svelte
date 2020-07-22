@@ -32,9 +32,8 @@
 <style>
   main {
     text-align: center;
-    padding: 1em;
-    max-width: 240px;
-    margin: 0 auto;
+    padding: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -50,7 +49,7 @@
 
   .field {
     font-weight: 200;
-    font-size: 80px;
+    font-size: 65px;
     margin: 0;
     text-align: right;
     width: 100%;
@@ -58,7 +57,7 @@
   }
 
   .field-unit {
-    font-size: 40px;
+    font-size: 33px;
     font-weight: 140;
     margin: 0;
     text-align: left;
@@ -74,12 +73,14 @@
     display: flex;
     align-items: end;
     justify-content: center;
+    width: 100%;
   }
 
   .field-sub-container {
     display: grid;
-    grid-template-columns: 5fr 3fr;
+    grid-template-columns: 6fr 3fr;
     width: 400px;
+    align-items: end;
   }
 
   .field-label-container {
@@ -87,6 +88,10 @@
     flex-direction: column;
     justify-content: space-evenly;
     padding: 0 0 0 10px;
+  }
+
+  .updated-field {
+    justify-content: flex-end;
   }
 
   .time-field {
@@ -132,9 +137,9 @@
   <div class="field-container">
     <div class="field-sub-container">
       <p class="field time-field">{time}</p>
-      <div class="field-label-container">
-        <p class="field-unit date-field">&nbsp;</p>
-        <p class="subfield">LAST UPDATE</p>
+      <div class="field-label-container updated-field">
+        <!-- <p class="field-unit date-field">&nbsp;</p> -->
+        <p class="subfield">LAST UPDATED</p>
       </div>
     </div>
   </div>
